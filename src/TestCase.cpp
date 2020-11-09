@@ -1,6 +1,6 @@
 #include "../include/TestCase.h"
-#include "../include/TestResult.h"
 #include "../include/Exception.h"
+#include "../include/TestResult.h"
 
 #include <exception>
 #include <iostream>

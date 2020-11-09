@@ -1,6 +1,6 @@
+#include "../include/TestResult.h"
 #include "../include/TestFailure.h"
 #include "../include/TestListener.h"
-#include "../include/TestResult.h"
 
 TestResult::~TestResult() { listeners.clear(); }
 

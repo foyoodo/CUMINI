@@ -22,9 +22,6 @@ public:                                                                        \
   return testSuite;                                                            \
   }
 
-// ! Fix me: can not create a new single testFunction, caused by the new
-// TestCaller.
-//
 #define CUMINI_TEST_NEW_TESTFUNCTION(testFunction) \
   new TestCaller<TestFixture>(#testFunction, testFunction)
 
