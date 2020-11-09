@@ -1,5 +1,5 @@
-#include "../include/Exception.h"
 #include "../include/TextOutputter.h"
+#include "../include/Exception.h"
 #include "../include/TestFailure.h"
 #include "../include/TestResult.h"
 #include "../include/TestResultCollector.h"
@@ -10,13 +10,27 @@ TextOutputter::TextOutputter(TestResultCollector *result, std::ostream &out)
 TextOutputter::~TextOutputter() = default;
 
 void TextOutputter::write() {
-  printFailures();
+  printHeader();
+  if (!result->wasSuccessful())
+    printFailures();
+}
+
+void TextOutputter::printHeader() {
+  if (result->wasSuccessful())
+    out << "\nOK (" << result->runTests() << " tests)\n";
+  else {
+    out << "\n!!!FAILURES!!!\n";
+    out << "Test Results:\n";
+    out << "Run: " << result->runTests()
+        << "   Failures: " << result->testFailures()
+        << "   Errors: " << result->testErrors() << "\n";
+  }
 }
 
 void TextOutputter::printFailures() {
-  auto it = result->getFailures().begin();
+  auto it = result->failures().begin();
   int failureNumber = 1;
-  while (it != result->getFailures().end()) {
+  while (it != result->failures().end()) {
     out << "\n";
     printFailure(*it++, failureNumber++);
   }

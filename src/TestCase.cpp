@@ -14,6 +14,7 @@ void TestCase::run(TestResult *result) {
     setUp();
     try {
       runTest();
+      result->addRunTest();
     } catch (Exception &e) {
       result->addFailure(this, e.clone());
     } catch (std::exception &e) {

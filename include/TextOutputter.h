@@ -17,6 +17,8 @@ public:
 
   void write();
 
+  virtual void printHeader();
+
   virtual void printFailures();
 
 protected:

@@ -14,6 +14,8 @@ public:
 
   virtual void addListener(TestListener *listener);
 
+  virtual void addRunTest();
+
   virtual void addFailure(Test *test, Exception *e);
 
   virtual void addError(Test *test, Exception *e);

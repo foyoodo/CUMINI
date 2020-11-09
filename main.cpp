@@ -11,8 +11,8 @@
 #include "include/TestResultCollector.h"
 #include "include/TestRunner.h"
 #include "include/TestSuite.h"
-#include "util/HelperMacros.h"
 #include "include/TextOutputter.h"
+#include "util/HelperMacros.h"
 
 #include <iostream>
 #include <string>
@@ -32,7 +32,6 @@ public:
   void test1() {
     cout << "SimpleTest: method test1: succeed!" << endl;
     CUMINI_ASSERT(2 == 3);
-    CUMINI_ASSERT(4 == 3);
     CUMINI_ASSERT_EQUAL(3, 2);
     CUMINI_ASSERT_LESS(2, 3);
     CUMINI_ASSERT_LESSEQUAL(2, 3);
@@ -40,7 +39,7 @@ public:
     CUMINI_ASSERT_GREATEREQUAL(3, 2);
   }
   void test2() {
-    CUMINI_ASSERT(2 == 3);
+    CUMINI_ASSERT(2 == 5);
     cout << "SimpleTest: method test2: succeed!" << endl;
   }
 };
@@ -60,7 +59,7 @@ public:
 };
 
 int printSuccess() {
-  cout << "printSuccess" << endl;
+  CUMINI_ASSERT(1 > 4);
   return 0;
 }
 
@@ -77,7 +76,7 @@ int main() {
   runner.run(&result);
 
   TextOutputter outputter(&resultListener, cout);
-  outputter.printFailures();
-  
+  outputter.write();
+
   return 0;
 }

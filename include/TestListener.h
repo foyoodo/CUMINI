@@ -7,6 +7,7 @@ class TestListener {
 public:
   virtual ~TestListener() = default;
 
+  virtual void addRunTest() = 0;
   virtual void addFailure(const TestFailure &) = 0;
 };
 

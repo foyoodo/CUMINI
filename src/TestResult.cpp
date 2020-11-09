@@ -8,6 +8,11 @@ void TestResult::addListener(TestListener *listener) {
   listeners.push_back(listener);
 }
 
+void TestResult::addRunTest() {
+  for (auto it = listeners.begin(); it != listeners.end(); ++it)
+    (*it)->addRunTest();
+}
+
 void TestResult::addFailure(Test *test, Exception *e) {
   TestFailure failure(test, e, false);
   addFailure(failure);
