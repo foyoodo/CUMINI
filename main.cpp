@@ -32,11 +32,11 @@ public:
   void test1() {
     cout << "SimpleTest: method test1: succeed!" << endl;
     CUMINI_ASSERT(2 == 3);
-    CUMINI_ASSERT_EQUAL(3, 2);
-    CUMINI_ASSERT_LESS(2, 3);
-    CUMINI_ASSERT_LESSEQUAL(2, 3);
-    CUMINI_ASSERT_GREATER(3, 2);
-    CUMINI_ASSERT_GREATEREQUAL(3, 2);
+    // CUMINI_ASSERT_EQUAL(3, 2);
+    // CUMINI_ASSERT_LESS(2, 3);
+    // CUMINI_ASSERT_LESSEQUAL(2, 3);
+    // CUMINI_ASSERT_GREATER(3, 2);
+    // CUMINI_ASSERT_GREATEREQUAL(3, 2);
   }
   void test2() {
     CUMINI_ASSERT(2 == 5);

@@ -1,6 +1,8 @@
 #ifndef TESTASSERT_H
 #define TESTASSERT_H
 
+#include "Asserter.h"
+
 #include <iostream>
 
 template <class T> struct AssertionTraits {
@@ -15,8 +17,8 @@ template <class T>
 void assertEqual(const T &expected, const T &actual, long lineNumber,
                  std::string message) {
   if (!AssertionTraits<T>::equal(actual, expected)) {
-    std::cout << "Not equals ( " << message << " : " << lineNumber << " )"
-              << std::endl;
+    Asserter::failNotEqual(std::to_string(expected), std::to_string(actual),
+                           lineNumber, message);
   }
 }
 
@@ -24,8 +26,8 @@ template <class T>
 void assertLess(const T &expected, const T &actual, long lineNumber,
                 const std::string message) {
   if (!AssertionTraits<T>::less(actual, expected)) {
-    std::cout << "Not less ( " << message << " : " << lineNumber << " )"
-              << std::endl;
+    Asserter::failNotLess(std::to_string(expected), std::to_string(actual),
+                           lineNumber, message);
   }
 }
 
@@ -33,8 +35,8 @@ template <class T>
 void assertLessEqual(const T &expected, const T &actual, long lineNumber,
                      const std::string message) {
   if (!AssertionTraits<T>::lessEqual(actual, expected)) {
-    std::cout << "Not lessEqual ( " << message << " : " << lineNumber << " )"
-              << std::endl;
+    Asserter::failNotLessEqual(std::to_string(expected), std::to_string(actual),
+                           lineNumber, message);
   }
 }
 
@@ -42,8 +44,8 @@ template <class T>
 void assertGreater(const T &expected, const T &actual, long lineNumber,
                    const std::string message) {
   if (!AssertionTraits<T>::less(expected, actual)) {
-    std::cout << "Not Greater ( " << message << " : " << lineNumber << " )"
-              << std::endl;
+    Asserter::failNotGreater(std::to_string(expected), std::to_string(actual),
+                           lineNumber, message);
   }
 }
 
@@ -51,8 +53,8 @@ template <class T>
 void assertGreaterEqual(const T &expected, const T &actual, long lineNumber,
                         const std::string message) {
   if (!AssertionTraits<T>::lessEqual(expected, actual)) {
-    std::cout << "Not GreaterEqual ( " << message << " : " << lineNumber << " )"
-              << std::endl;
+    Asserter::failNotGreaterEqual(std::to_string(expected), std::to_string(actual),
+                           lineNumber, message);
   }
 }
 

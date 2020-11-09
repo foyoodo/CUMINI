@@ -11,3 +11,40 @@ void Asserter::failIf(bool shouldFail, const std::string message,
   if (shouldFail)
     fail(message, lineNumber, fileName);
 }
+
+void Asserter::failNotEqual(std::string expected, std::string actual,
+                            const long lineNumber, const std::string fileName) {
+  std::string message = "Excepted: " + expected + "\n" + "Actual: " + actual;
+  fail(message, lineNumber, fileName);
+}
+
+void Asserter::failNotLess(std::string expected, std::string actual,
+                           const long lineNumber, const std::string fileName) {
+  std::string message = "Excepted: " + expected + "\n" + "Actual: " + actual +
+                        "\n" + "Excepted is less or equal than: " + actual;
+  fail(message, lineNumber, fileName);
+}
+
+void Asserter::failNotLessEqual(std::string expected, std::string actual,
+                                const long lineNumber,
+                                const std::string fileName) {
+  std::string message = "Excepted: " + expected + "\n" + "Actual: " + actual +
+                        "\n" + "Excepted is less than " + actual;
+  fail(message, lineNumber, fileName);
+}
+
+void Asserter::failNotGreater(std::string expected, std::string actual,
+                              const long lineNumber,
+                              const std::string fileName) {
+  std::string message = "Excepted: " + expected + "\n" + "Actual: " + actual +
+                        "\n" + "Excepted is greater or equal than " + actual;
+  fail(message, lineNumber, fileName);
+}
+
+void Asserter::failNotGreaterEqual(std::string expected, std::string actual,
+                                   const long lineNumber,
+                                   const std::string fileName) {
+  std::string message = "Excepted: " + expected + "\n" + "Actual: " + actual +
+                        "\n" + "Excepted is greater than " + actual;
+  fail(message, lineNumber, fileName);
+}

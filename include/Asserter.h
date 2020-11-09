@@ -10,6 +10,23 @@ struct Asserter {
 
   static void failIf(bool shouldFail, const std::string message,
                      const long lineNumber, const std::string fileName);
+
+  static void failNotEqual(std::string expected, std::string actual,
+                           const long lineNumber, const std::string fileName);
+
+  static void failNotLess(std::string expected, std::string actual,
+                          const long lineNumber, const std::string fileName);
+
+  static void failNotLessEqual(std::string expected, std::string actual,
+                               const long lineNumber,
+                               const std::string fileName);
+
+  static void failNotGreater(std::string expected, std::string actual,
+                             const long lineNumber, const std::string fileName);
+
+  static void failNotGreaterEqual(std::string expected, std::string actual,
+                                  const long lineNumber,
+                                  const std::string fileName);
 };
 
 #endif
