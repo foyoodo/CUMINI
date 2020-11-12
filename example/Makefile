@@ -1,12 +1,12 @@
 
-# To compile and run main.
+# To compile and run main for Triangle.
 
 CC=c++
 S=src
 
 OBJS = \
 	main.o \
-	example/Triangle.o \
+	Triangle.o \
 	$S/Asserter.o \
 	$S/Exception.o \
 	$S/Test.o \

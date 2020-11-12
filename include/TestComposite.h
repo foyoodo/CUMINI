@@ -17,7 +17,7 @@ public:
 
   int countTestCases() const;
 
-  Test *getChildTestAt(int index) const = 0;
+  virtual Test *getChildTestAt(int index) const = 0;
 
   std::string getName() const;
 

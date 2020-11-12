@@ -14,61 +14,34 @@
 #include "include/TextOutputter.h"
 #include "util/HelperMacros.h"
 
+#include "example/Triangle.h"
+
 #include <iostream>
 #include <string>
 
 using namespace std;
 
-class SimpleTest : public TestFixture {
-  CUMINI_TEST_SUITE(SimpleTest);
-  CUMINI_TEST(test1);
-  CUMINI_TEST(test2);
+class TriangleTest : public TestFixture {
+  CUMINI_TEST_SUITE(TriangleTest);
+  CUMINI_TEST(triangle121);
+  CUMINI_TEST(triangle122);
   CUMINI_TEST_SUITE_END();
 
 public:
-  void setUp() { cout << "--- SimpleTest setUp ---\n" << endl; }
-  void tearDown() { cout << "\n--- SimpleTest tearDown ---\n" << endl; }
-
-  void test1() {
-    cout << "SimpleTest: method test1: succeed!" << endl;
-    CUMINI_ASSERT(2 == 3);
-    // CUMINI_ASSERT_EQUAL(3, 2);
-    // CUMINI_ASSERT_LESS(2, 3);
-    // CUMINI_ASSERT_LESSEQUAL(2, 3);
-    // CUMINI_ASSERT_GREATER(3, 2);
-    // CUMINI_ASSERT_GREATEREQUAL(3, 2);
+  void triangle121() {
+    Triangle triangle(1, 2, 1);
+    CUMINI_ASSERT(Triangle::isTriangle(triangle));
   }
-  void test2() {
-    CUMINI_ASSERT(2 == 5);
-    cout << "SimpleTest: method test2: succeed!" << endl;
+
+  void triangle122() {
+    Triangle triangle(1, 2, 2);
+    CUMINI_ASSERT(Triangle::isTriangle(triangle));
   }
 };
-
-class AnTest : public TestFixture {
-  CUMINI_TEST_SUITE(AnTest);
-  CUMINI_TEST(test1);
-  CUMINI_TEST(test2);
-  CUMINI_TEST_SUITE_END();
-
-public:
-  void setUp() { cout << "--- AnTest setUp ---\n" << endl; }
-  void tearDown() { cout << "\n--- AnTest tearDown ---\n" << endl; }
-
-  void test1() { cout << "AnTest: method test1: succeed!" << endl; }
-  void test2() { cout << "AnTest: method test2: succeed!" << endl; }
-};
-
-int printSuccess() {
-  CUMINI_ASSERT(1 > 4);
-  return 0;
-}
 
 int main() {
   TestRunner runner;
-  runner.addTest(SimpleTest::suite());
-  runner.addTest(AnTest::suite());
-  runner.addTest(CUMINI_TEST_NEW_TESTFUNCTION(printSuccess));
-  cout << runner.getChildTestCount() << endl;
+  runner.addTest(TriangleTest::suite());
 
   TestResult result;
   TestResultCollector resultListener;
