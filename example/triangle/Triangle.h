@@ -17,6 +17,8 @@ public:
 
   long *getBorders() const;
 
+  bool operator==(const Triangle &rhs) const;
+
 protected:
   long lborderA;
   long lborderB;

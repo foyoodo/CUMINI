@@ -15,6 +15,8 @@ class TriangleTest : public TestFixture {
   CUMINI_TEST(triangle122);
   CUMINI_TEST(triangle222);
   CUMINI_TEST(triangle234);
+  CUMINI_TEST(triangleEqual);
+  CUMINI_TEST(triangleEqual2);
   CUMINI_TEST_SUITE_END();
 
 public:
@@ -46,6 +48,18 @@ public:
     Triangle triangle(2, 3, 4);
     CUMINI_ASSERT(triangle.isTriangle());
     std::cout << "triangle234: " << triangle.getType() << std::endl;
+  }
+
+  void triangleEqual() {
+    Triangle triangle1(2, 3, 4);
+    Triangle triangle2(3, 2, 4);
+    CUMINI_ASSERT(triangle1 == triangle2);
+  }
+
+  void triangleEqual2() {
+    Triangle triangle1(2, 3, 4);
+    Triangle triangle2(3, 3, 4);
+    CUMINI_ASSERT(triangle1 == triangle2);
   }
 };
 

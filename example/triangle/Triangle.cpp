@@ -1,5 +1,7 @@
 #include "Triangle.h"
+#include "../../include/TestAssert.h"
 
+#include <algorithm>
 #include <climits>
 
 Triangle::Triangle(long lborderA, long lborderB, long lborderC)
@@ -52,4 +54,16 @@ long *Triangle::getBorders() const {
   borders[1] = lborderB;
   borders[2] = lborderC;
   return borders;
+}
+
+bool Triangle::operator==(const Triangle &rhs) const {
+  CUMINI_ASSERT(isTriangle());
+  CUMINI_ASSERT(rhs.isTriangle());
+  long *a = getBorders(), *b = rhs.getBorders();
+  std::sort(a, a + 3);
+  std::sort(b, b + 3);
+  for (int i = 0; i < 3; ++i)
+    if (a[i] != b[i])
+      return false;
+  return true;
 }
