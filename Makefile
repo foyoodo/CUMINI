@@ -6,7 +6,6 @@ S=src
 
 OBJS = \
 	main.o \
-	example/triangle/Triangle.o \
 	$S/Asserter.o \
 	$S/Exception.o \
 	$S/Test.o \

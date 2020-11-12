@@ -19,10 +19,10 @@ public:                                                                        \
   testSuite->addTest(new Caller(#testMethod, &TestFixtureType::testMethod))
 
 #define CUMINI_TEST_SUITE_END()                                                \
-  return testSuite;                                                            \
+    return testSuite;                                                          \
   }
 
-#define CUMINI_TEST_NEW_TESTFUNCTION(testFunction) \
+#define CUMINI_TEST_NEW_TESTFUNCTION(testFunction)                             \
   new TestCaller<TestFixture>(#testFunction, testFunction)
 
 #endif

@@ -14,41 +14,63 @@
 #include "include/TextOutputter.h"
 #include "util/HelperMacros.h"
 
-#include "example/triangle/Triangle.h"
-
 #include <iostream>
-#include <string>
 
-using namespace std;
-
-class TriangleTest : public TestFixture {
-  CUMINI_TEST_SUITE(TriangleTest);
-  CUMINI_TEST(triangle121);
-  CUMINI_TEST(triangle122);
+class SimpleTest : public TestFixture {
+  CUMINI_TEST_SUITE(SimpleTest);
+  CUMINI_TEST(testEqual);
+  CUMINI_TEST(testLess);
+  CUMINI_TEST(testLessEqual);
+  CUMINI_TEST(testGreater);
+  CUMINI_TEST(testGreaterEqual);
   CUMINI_TEST_SUITE_END();
 
 public:
-  void triangle121() {
-    Triangle triangle(1, 2, 1);
-    CUMINI_ASSERT(triangle.isTriangle());
+  void setUp() {
+    // std::cout << "\n--- SimpleTest: unit start\n";
   }
 
-  void triangle122() {
-    Triangle triangle(1, 2, 2);
-    CUMINI_ASSERT(triangle.isTriangle());
+  void tearDown() {
+    // std::cout << "\n    SimpleTest: unit done ---\n";
+  }
+
+  void testEqual() {
+    CUMINI_ASSERT_EQUAL(2, 2);
+    CUMINI_ASSERT_EQUAL(2, 3);
+  }
+
+  void testLess() {
+    CUMINI_ASSERT_LESS(2, 3);
+  }
+
+  void testLessEqual() {
+    CUMINI_ASSERT_LESSEQUAL(2, 3);
+  }
+
+  void testGreater() {
+    CUMINI_ASSERT_GREATER(3, 4);
+  }
+
+  void testGreaterEqual() {
+    CUMINI_ASSERT_GREATEREQUAL(3, 4);
   }
 };
 
+void testAssert() {
+  CUMINI_ASSERT(2 == 3);
+}
+
 int main() {
   TestRunner runner;
-  runner.addTest(TriangleTest::suite());
+  runner.addTest(SimpleTest::suite());
+  runner.addTest(CUMINI_TEST_NEW_TESTFUNCTION(testAssert)); // single function
 
   TestResult result;
   TestResultCollector resultListener;
   result.addListener(&resultListener);
   runner.run(&result);
 
-  TextOutputter outputter(&resultListener, cout);
+  TextOutputter outputter(&resultListener, std::cout);
   outputter.write();
 
   return 0;
