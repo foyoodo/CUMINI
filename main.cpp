@@ -14,7 +14,7 @@
 #include "include/TextOutputter.h"
 #include "util/HelperMacros.h"
 
-#include "example/Triangle.h"
+#include "example/triangle/Triangle.h"
 
 #include <iostream>
 #include <string>
@@ -30,12 +30,12 @@ class TriangleTest : public TestFixture {
 public:
   void triangle121() {
     Triangle triangle(1, 2, 1);
-    CUMINI_ASSERT(Triangle::isTriangle(triangle));
+    CUMINI_ASSERT(triangle.isTriangle());
   }
 
   void triangle122() {
     Triangle triangle(1, 2, 2);
-    CUMINI_ASSERT(Triangle::isTriangle(triangle));
+    CUMINI_ASSERT(triangle.isTriangle());
   }
 };
 

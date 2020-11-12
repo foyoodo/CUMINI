@@ -6,7 +6,7 @@ S=src
 
 OBJS = \
 	main.o \
-	example/Triangle.o \
+	example/triangle/Triangle.o \
 	$S/Asserter.o \
 	$S/Exception.o \
 	$S/Test.o \
@@ -32,7 +32,7 @@ run : main
 all : main
 
 clean :
-	rm -f *.o */*.o \
+	rm -f *.o */*.o */*/*.o \
 	main
 
 .PHONY : clean

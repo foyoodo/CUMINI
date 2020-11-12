@@ -1,11 +1,11 @@
 
-# To compile and run main for Triangle.
+# To compile and run TriangleTest.
 
 CC=c++
-S=src
+S=../../src
 
 OBJS = \
-	main.o \
+	TriangleTest.o \
 	Triangle.o \
 	$S/Asserter.o \
 	$S/Exception.o \
@@ -20,19 +20,17 @@ OBJS = \
 	$S/TestSuite.o \
 	$S/TextOutputter.o
 
-main : $(OBJS)
-	$(CC) -std=c++11 -o main $(OBJS)
+TriangleTest : $(OBJS)
+	$(CC) -std=c++11 -o TriangleTest $(OBJS)
 
 $(OBJS): %.o : %.cpp
 	$(CC) -std=c++11 -c -o $@ $<
 
-run : main
-	@echo "*** main is starting ***" && ./main
-
-all : main
+run : TriangleTest
+	@echo "\n*** TriangleTest is starting ***\n" && ./TriangleTest
 
 clean :
-	rm -f *.o */*.o \
-	main
+	rm -f *.o */*.o ../../*/*.o \
+	TriangleTest
 
 .PHONY : clean

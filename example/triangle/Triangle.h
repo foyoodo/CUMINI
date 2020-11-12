@@ -9,11 +9,11 @@ public:
 
   ~Triangle();
 
-  static bool isTriangle(Triangle &triangle);
+  bool isTriangle() const;
 
-  static std::string getType(Triangle &triangle);
+  std::string getType() const;
 
-  static long diffOfBorders(long a, long b);
+  long diffOfBorders(long a, long b) const;
 
   long *getBorders() const;
 
