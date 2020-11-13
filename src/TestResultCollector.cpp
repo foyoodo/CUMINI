@@ -1,6 +1,8 @@
 #include "../include/TestResultCollector.h"
 #include "../include/TestFailure.h"
 
+namespace CUMINI {
+
 TestResultCollector::~TestResultCollector() {
   auto it = m_failures.begin();
   while (it != m_failures.end())
@@ -31,3 +33,5 @@ int TestResultCollector::testFailures() const {
 }
 
 bool TestResultCollector::wasSuccessful() const { return m_success; }
+
+} // namespace CUMINI

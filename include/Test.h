@@ -3,6 +3,8 @@
 
 #include <string>
 
+namespace CUMINI {
+
 class TestResult;
 
 class Test {
@@ -28,5 +30,7 @@ protected:
   // Throws an exception if the specified index is invalid.
   virtual void checkInvalidIndex(int index) const;
 };
+
+} // namespace CUMINI
 
 #endif // TEST_H

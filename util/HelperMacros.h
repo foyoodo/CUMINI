@@ -11,18 +11,18 @@
   using TestFixtureType = ATestFixtureType;                                    \
                                                                                \
 public:                                                                        \
-  static TestSuite *suite() {                                                  \
-    TestSuite *testSuite = new TestSuite(#ATestFixtureType);                   \
-    using Caller = TestCaller<TestFixtureType>;
+  static CUMINI::TestSuite *suite() {                                          \
+    CUMINI::TestSuite *testSuite = new CUMINI::TestSuite(#ATestFixtureType);   \
+    using Caller = CUMINI::TestCaller<TestFixtureType>;
 
 #define CUMINI_TEST(testMethod)                                                \
-  testSuite->addTest(new Caller(#testMethod, &TestFixtureType::testMethod))
+    testSuite->addTest(new Caller(#testMethod, &TestFixtureType::testMethod))
 
 #define CUMINI_TEST_SUITE_END()                                                \
     return testSuite;                                                          \
   }
 
 #define CUMINI_TEST_NEW_TESTFUNCTION(testFunction)                             \
-  new TestCaller<TestFixture>(#testFunction, testFunction)
+  new CUMINI::TestCaller<CUMINI::TestFixture>(#testFunction, testFunction)
 
 #endif

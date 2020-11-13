@@ -6,6 +6,8 @@
 #include <functional>
 #include <string>
 
+namespace CUMINI {
+
 template <class Fixture> class TestCaller : public TestCase {
 
   typedef void (Fixture::*TestMethod)();
@@ -56,5 +58,7 @@ private:
   Fixture *fixture;
   std::function<void()> testFunction;
 };
+
+} // namespace CUMINI
 
 #endif

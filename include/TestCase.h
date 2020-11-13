@@ -4,6 +4,8 @@
 #include "TestFixture.h"
 #include "TestLeaf.h"
 
+namespace CUMINI {
+
 class TestResult;
 
 class TestCase : public TestLeaf, public TestFixture {
@@ -25,5 +27,7 @@ private:
 private:
   const std::string name;
 };
+
+} // namespace CUMINI
 
 #endif

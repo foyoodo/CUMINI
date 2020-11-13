@@ -4,6 +4,8 @@
 #include <exception>
 #include <string>
 
+namespace CUMINI {
+
 class Exception : public std::exception {
 public:
   Exception(std::string message, long lineNumber = -1,
@@ -28,5 +30,7 @@ protected:
   long m_lineNumber;
   std::string m_fileName;
 };
+
+} // namespace CUMINI
 
 #endif

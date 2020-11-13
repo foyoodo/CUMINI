@@ -1,5 +1,7 @@
 #include "../include/Exception.h"
 
+namespace CUMINI {
+
 Exception::Exception(std::string message, long lineNumber, std::string fileName)
     : m_message(message), m_lineNumber(lineNumber), m_fileName(fileName) {}
 
@@ -23,3 +25,5 @@ long Exception::lineNumber() const { return m_lineNumber; }
 std::string Exception::fileName() const { return m_fileName; }
 
 Exception *Exception::clone() const { return new Exception(*this); }
+
+} // namespace CUMINI

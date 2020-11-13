@@ -5,6 +5,8 @@
 
 #include <string>
 
+namespace CUMINI {
+
 class TestResult;
 
 class TestComposite : public Test {
@@ -28,5 +30,7 @@ private:
 private:
   const std::string name;
 };
+
+} // namespace CUMINI
 
 #endif // TESTCOMPOSITE_H

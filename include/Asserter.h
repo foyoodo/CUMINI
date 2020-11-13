@@ -3,6 +3,8 @@
 
 #include <string>
 
+namespace CUMINI {
+
 struct Asserter {
 
   static void fail(const std::string message, const long lineNumber,
@@ -28,5 +30,7 @@ struct Asserter {
                                   const long lineNumber,
                                   const std::string fileName);
 };
+
+} // namespace CUMINI
 
 #endif

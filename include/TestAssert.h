@@ -5,6 +5,8 @@
 
 #include <iostream>
 
+namespace CUMINI {
+
 template <class T> struct AssertionTraits {
   static bool equal(const T &x, const T &y) { return x == y; }
 
@@ -58,23 +60,26 @@ void assertGreaterEqual(const T &expected, const T &actual, long lineNumber,
   }
 }
 
+} // namespace CUMINI
+
 #define CUMINI_ASSERT(condation)                                               \
-  (Asserter::failIf(!(condation), "assertion failed, Exception: " #condation,  \
-                    __LINE__, __FILE__))
+  (CUMINI::Asserter::failIf(!(condation),                                      \
+                            "assertion failed, Exception: " #condation,        \
+                            __LINE__, __FILE__))
 
 #define CUMINI_ASSERT_EQUAL(expected, actual)                                  \
-  assertEqual(expected, actual, __LINE__, __FILE__);
+  CUMINI::assertEqual(expected, actual, __LINE__, __FILE__);
 
 #define CUMINI_ASSERT_LESS(expected, actual)                                   \
-  assertLess(expected, actual, __LINE__, __FILE__);
+  CUMINI::assertLess(expected, actual, __LINE__, __FILE__);
 
 #define CUMINI_ASSERT_LESSEQUAL(expected, actual)                              \
-  assertLessEqual(expected, actual, __LINE__, __FILE__);
+  CUMINI::assertLessEqual(expected, actual, __LINE__, __FILE__);
 
 #define CUMINI_ASSERT_GREATER(expected, actual)                                \
-  assertGreater(expected, actual, __LINE__, __FILE__);
+  CUMINI::assertGreater(expected, actual, __LINE__, __FILE__);
 
 #define CUMINI_ASSERT_GREATEREQUAL(expected, actual)                           \
-  assertGreaterEqual(expected, actual, __LINE__, __FILE__);
+  CUMINI::assertGreaterEqual(expected, actual, __LINE__, __FILE__);
 
 #endif

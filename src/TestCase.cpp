@@ -5,6 +5,8 @@
 #include <exception>
 #include <iostream>
 
+namespace CUMINI {
+
 TestCase::TestCase(const std::string &name) : name(name) {}
 
 TestCase::~TestCase() = default;
@@ -33,3 +35,5 @@ void TestCase::run(TestResult *result) {
 }
 
 std::string TestCase::getName() const { return name; }
+
+} // namespace CUMINI

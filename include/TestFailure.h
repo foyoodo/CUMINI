@@ -3,6 +3,8 @@
 
 #include <string>
 
+namespace CUMINI {
+
 class Test;
 class Exception;
 
@@ -31,5 +33,7 @@ private:
   Exception *m_thrownException;
   bool m_isError;
 };
+
+} // namespace CUMINI
 
 #endif

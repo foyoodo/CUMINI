@@ -4,6 +4,8 @@
 #include "../include/TestResult.h"
 #include "../include/TestResultCollector.h"
 
+namespace CUMINI {
+
 TextOutputter::TextOutputter(TestResultCollector *result, std::ostream &out)
     : result(result), out(out) {}
 
@@ -43,3 +45,5 @@ void TextOutputter::printFailure(TestFailure *failure, int failureNumber) {
   out << "line: " << failure->lineNumber() << ' ' << failure->fileName();
   out << "\n" << failure->thrownException()->message() << "\n";
 }
+
+} // namespace CUMINI

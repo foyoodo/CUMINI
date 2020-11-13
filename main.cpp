@@ -16,7 +16,7 @@
 
 #include <iostream>
 
-class SimpleTest : public TestFixture {
+class SimpleTest : public CUMINI::TestFixture {
   CUMINI_TEST_SUITE(SimpleTest);
   CUMINI_TEST(testEqual);
   CUMINI_TEST(testLess);
@@ -61,16 +61,16 @@ void testAssert() {
 }
 
 int main() {
-  TestRunner runner;
+  CUMINI::TestRunner runner;
   runner.addTest(SimpleTest::suite());
   runner.addTest(CUMINI_TEST_NEW_TESTFUNCTION(testAssert)); // single function
 
-  TestResult result;
-  TestResultCollector resultListener;
+  CUMINI::TestResult result;
+  CUMINI::TestResultCollector resultListener;
   result.addListener(&resultListener);
   runner.run(&result);
 
-  TextOutputter outputter(&resultListener, std::cout);
+  CUMINI::TextOutputter outputter(&resultListener, std::cout);
   outputter.write();
 
   return 0;

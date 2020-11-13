@@ -5,6 +5,8 @@
 
 #include <ostream>
 
+namespace CUMINI {
+
 class TestFailure;
 class TestResult;
 class TestResultCollector;
@@ -28,5 +30,7 @@ protected:
   TestResultCollector *result;
   std::ostream &out;
 };
+
+} // namespace CUMINI
 
 #endif

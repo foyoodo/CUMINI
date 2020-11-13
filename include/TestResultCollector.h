@@ -5,6 +5,8 @@
 
 #include <deque>
 
+namespace CUMINI {
+
 class TestFailure;
 
 class TestResultCollector : public TestListener {
@@ -31,5 +33,7 @@ private:
   int m_testErrors;
   bool m_success = true;
 };
+
+} // namespace CUMINI
 
 #endif

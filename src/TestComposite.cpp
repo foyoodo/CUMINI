@@ -1,5 +1,7 @@
 #include "../include/TestComposite.h"
 
+namespace CUMINI {
+
 TestComposite::TestComposite(const std::string &name) : name(name) {}
 
 TestComposite::~TestComposite() {}
@@ -21,3 +23,5 @@ int TestComposite::countTestCases() const {
 }
 
 std::string TestComposite::getName() const { return name; }
+
+} // namespace CUMINI

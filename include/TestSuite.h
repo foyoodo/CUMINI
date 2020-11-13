@@ -5,6 +5,8 @@
 
 #include <vector>
 
+namespace CUMINI {
+
 class TestSuite : public TestComposite {
 public:
   TestSuite(const std::string name = "");
@@ -17,7 +19,7 @@ public:
   // Return the list of tests.
   const std::vector<Test *> &getTests() const;
 
-  // Return the child test of the specified index.(Override)
+  // Return the child test of the specified index.
   Test *getChildTestAt(int index) const;
 
   int getChildTestCount() const;
@@ -27,5 +29,7 @@ public:
 private:
   std::vector<Test *> tests;
 };
+
+} // namespace CUMINI
 
 #endif

@@ -8,7 +8,7 @@
 
 #include <iostream>
 
-class TriangleTest : public TestFixture {
+class TriangleTest : public CUMINI::TestFixture {
   CUMINI_TEST_SUITE(TriangleTest);
   CUMINI_TEST(triangle011);
   CUMINI_TEST(triangle121);
@@ -64,15 +64,15 @@ public:
 };
 
 int main() {
-  TestRunner runner;
+  CUMINI::TestRunner runner;
   runner.addTest(TriangleTest::suite());
 
-  TestResult result;
-  TestResultCollector resultListener;
+  CUMINI::TestResult result;
+  CUMINI::TestResultCollector resultListener;
   result.addListener(&resultListener);
   runner.run(&result);
 
-  TextOutputter outputter(&resultListener, std::cout);
+  CUMINI::TextOutputter outputter(&resultListener, std::cout);
   outputter.write();
   return 0;
 }

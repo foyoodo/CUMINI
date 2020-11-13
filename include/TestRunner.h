@@ -1,6 +1,8 @@
 #ifndef TESTRUNNER_H
 #define TESTRUNNER_H
 
+namespace CUMINI {
+
 class Test;
 class TestResult;
 class TestSuite;
@@ -24,5 +26,7 @@ private:
   TestRunner(const TestRunner &another);
   TestRunner &operator=(TestRunner &another);
 };
+
+} // namespace CUMINI
 
 #endif

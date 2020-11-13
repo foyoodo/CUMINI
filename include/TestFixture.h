@@ -1,6 +1,8 @@
 #ifndef TESTFIXTURE_H
 #define TESTFIXTURE_H
 
+namespace CUMINI {
+
 class TestFixture {
 public:
   virtual ~TestFixture() = default;
@@ -9,5 +11,7 @@ public:
 
   virtual void tearDown() {};
 };
+
+} // namespace CUMINI
 
 #endif

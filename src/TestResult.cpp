@@ -2,6 +2,8 @@
 #include "../include/TestFailure.h"
 #include "../include/TestListener.h"
 
+namespace CUMINI {
+
 TestResult::~TestResult() { listeners.clear(); }
 
 void TestResult::addListener(TestListener *listener) {
@@ -27,3 +29,5 @@ void TestResult::addFailure(const TestFailure &failure) {
   for (auto it = listeners.begin(); it != listeners.end(); ++it)
     (*it)->addFailure(failure);
 }
+
+} // namespace CUMINI

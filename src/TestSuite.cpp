@@ -1,5 +1,7 @@
 #include "../include/TestSuite.h"
 
+namespace CUMINI {
+
 TestSuite::TestSuite(const std::string name) : TestComposite(name) {}
 
 TestSuite::~TestSuite() {}
@@ -25,3 +27,5 @@ void TestSuite::deleteChildTests() {
   }
   tests.clear();
 }
+
+} // namespace CUMINI

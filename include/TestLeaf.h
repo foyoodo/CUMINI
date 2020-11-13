@@ -3,6 +3,8 @@
 
 #include "Test.h"
 
+namespace CUMINI {
+
 class TestLeaf : public Test {
 public:
   int countTestCases() const;
@@ -12,5 +14,7 @@ public:
   // Always throw std::out_of_range.
   Test *getChildTestAt(int index) const;
 };
+
+} // namespace CUMINI
 
 #endif

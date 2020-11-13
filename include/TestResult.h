@@ -3,6 +3,8 @@
 
 #include <deque>
 
+namespace CUMINI {
+
 class Exception;
 class Test;
 class TestFailure;
@@ -26,5 +28,7 @@ protected:
 protected:
   std::deque<TestListener *> listeners;
 };
+
+} // namespace CUMINI
 
 #endif

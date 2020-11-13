@@ -2,6 +2,8 @@
 #include "../include/Exception.h"
 #include "../include/Test.h"
 
+namespace CUMINI {
+
 TestFailure::TestFailure(Test *failedTest, Exception *thrownException,
                          bool isError)
     : m_failedTest(failedTest), m_thrownException(thrownException),
@@ -28,3 +30,5 @@ bool TestFailure::isError() const { return m_isError; }
 TestFailure *TestFailure::clone() const {
   return new TestFailure(m_failedTest, m_thrownException->clone(), m_isError);
 }
+
+} // namespace CUMINI
