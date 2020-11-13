@@ -1,5 +1,5 @@
-#ifndef TESTEXCEPTION_H
-#define TESTEXCEPTION_H
+#ifndef CUMINI_TESTEXCEPTION_H
+#define CUMINI_TESTEXCEPTION_H
 
 #include <exception>
 #include <string>

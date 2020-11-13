@@ -1,5 +1,5 @@
-#ifndef TEST_H
-#define TEST_H
+#ifndef CUMINI_TEST_H
+#define CUMINI_TEST_H
 
 #include <string>
 
@@ -33,4 +33,4 @@ protected:
 
 } // namespace CUMINI
 
-#endif // TEST_H
+#endif // CUMINI_TEST_H

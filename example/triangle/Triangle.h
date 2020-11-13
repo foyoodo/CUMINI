@@ -1,5 +1,5 @@
-#ifndef TRIANGLE_H
-#define TRIANGLE_H
+#ifndef CUMINI_TRIANGLE_H
+#define CUMINI_TRIANGLE_H
 
 #include <string>
 

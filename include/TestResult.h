@@ -1,5 +1,5 @@
-#ifndef TESTRESULT_H
-#define TESTRESULT_H
+#ifndef CUMINI_TESTRESULT_H
+#define CUMINI_TESTRESULT_H
 
 #include <deque>
 

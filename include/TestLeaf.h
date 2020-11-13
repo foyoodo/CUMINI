@@ -1,5 +1,5 @@
-#ifndef TESTLEAF_H
-#define TESTLEAF_H
+#ifndef CUMINI_TESTLEAF_H
+#define CUMINI_TESTLEAF_H
 
 #include "Test.h"
 

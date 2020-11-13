@@ -1,5 +1,5 @@
-#ifndef TESTFIXTURE_H
-#define TESTFIXTURE_H
+#ifndef CUMINI_TESTFIXTURE_H
+#define CUMINI_TESTFIXTURE_H
 
 namespace CUMINI {
 

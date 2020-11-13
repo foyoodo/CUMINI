@@ -1,5 +1,5 @@
-#ifndef TESTCALLER_H
-#define TESTCALLER_H
+#ifndef CUMINI_TESTCALLER_H
+#define CUMINI_TESTCALLER_H
 
 #include "TestCase.h"
 

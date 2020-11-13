@@ -1,5 +1,5 @@
-#ifndef OUTPUTTER_H
-#define OUTPUTTER_H
+#ifndef CUMINI_OUTPUTTER_H
+#define CUMINI_OUTPUTTER_H
 
 namespace CUMINI {
 

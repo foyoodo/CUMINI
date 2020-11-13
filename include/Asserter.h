@@ -1,5 +1,5 @@
-#ifndef ASSERTER_H
-#define ASSERTER_H
+#ifndef CUMINI_ASSERTER_H
+#define CUMINI_ASSERTER_H
 
 #include <string>
 

@@ -1,5 +1,5 @@
-#ifndef TESTSUITE_H
-#define TESTSUITE_H
+#ifndef CUMINI_TESTSUITE_H
+#define CUMINI_TESTSUITE_H
 
 #include "TestComposite.h"
 

@@ -1,5 +1,5 @@
-#ifndef TEXTOUTPUTTER_H
-#define TEXTOUTPUTTER_H
+#ifndef CUMINI_TEXTOUTPUTTER_H
+#define CUMINI_TEXTOUTPUTTER_H
 
 #include "Outputter.h"
 

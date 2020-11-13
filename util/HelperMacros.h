@@ -1,5 +1,5 @@
-#ifndef HELPERMACROS_H
-#define HELPERMACROS_H
+#ifndef CUMINI_HELPERMACROS_H
+#define CUMINI_HELPERMACROS_H
 
 #include "../include/Asserter.h"
 #include "../include/TestAssert.h"

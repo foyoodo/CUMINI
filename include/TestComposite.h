@@ -1,5 +1,5 @@
-#ifndef TESTCOMPOSITE_H
-#define TESTCOMPOSITE_H
+#ifndef CUMINI_TESTCOMPOSITE_H
+#define CUMINI_TESTCOMPOSITE_H
 
 #include "Test.h"
 
@@ -33,4 +33,4 @@ private:
 
 } // namespace CUMINI
 
-#endif // TESTCOMPOSITE_H
+#endif // CUMINI_TESTCOMPOSITE_H

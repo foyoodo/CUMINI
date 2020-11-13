@@ -1,5 +1,5 @@
-#ifndef TESTLISTENER_H
-#define TESTLISTENER_H
+#ifndef CUMINI_TESTLISTENER_H
+#define CUMINI_TESTLISTENER_H
 
 namespace CUMINI {
 

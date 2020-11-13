@@ -1,5 +1,5 @@
-#ifndef TESTCASE_H
-#define TESTCASE_H
+#ifndef CUMINI_TESTCASE_H
+#define CUMINI_TESTCASE_H
 
 #include "TestFixture.h"
 #include "TestLeaf.h"

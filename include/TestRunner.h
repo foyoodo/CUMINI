@@ -1,5 +1,5 @@
-#ifndef TESTRUNNER_H
-#define TESTRUNNER_H
+#ifndef CUMINI_TESTRUNNER_H
+#define CUMINI_TESTRUNNER_H
 
 namespace CUMINI {
 

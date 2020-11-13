@@ -1,5 +1,5 @@
-#ifndef TESTFAILURE_H
-#define TESTFAILURE_H
+#ifndef CUMINI_TESTFAILURE_H
+#define CUMINI_TESTFAILURE_H
 
 #include <string>
 

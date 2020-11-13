@@ -1,5 +1,5 @@
-#ifndef TESTASSERT_H
-#define TESTASSERT_H
+#ifndef CUMINI_TESTASSERT_H
+#define CUMINI_TESTASSERT_H
 
 #include "Asserter.h"
 
