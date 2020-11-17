@@ -1,4 +1,5 @@
 main
+CalculatorTest
 TriangleTest
 *.o
 .DS_Store

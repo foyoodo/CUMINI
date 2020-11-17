@@ -1,0 +1,28 @@
+This project is a mini part of CppUnit unit testing library.
+
+You can use `make [...]` to compile and run examples.
+
+github.com/AlDanial/cloc
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+C++                             16            141              4            490
+C/C++ Header                    20            222             14            446
+make                             2             23              2             65
+-------------------------------------------------------------------------------
+SUM:                            38            386             20           1001
+-------------------------------------------------------------------------------
+
+Reference project: https://github.com/Ultimaker/CppUnit
+
+For future contributions, we refer you to FreeDesktop's
+efforts to maintain the library:
+
+https://www.freedesktop.org/wiki/Software/cppunit/
+
+                CppUnit --- The C++ Unit Test Library
+                -------------------------------------
+            http://www.freedesktop.org/wiki/Software/cppunit
+
+CppUnit is the C++ port of the famous JUnit framework for unit
+testing.

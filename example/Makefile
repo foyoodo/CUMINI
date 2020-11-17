@@ -40,6 +40,8 @@ calculator : CalculatorTest
 triangle : TriangleTest
 	@echo "\n*** TriangleTest is starting ***\n" && ./TriangleTest
 
+all : CalculatorTest TriangleTest
+
 clean :
 	rm -f */*.o \
 	CalculatorTest TriangleTest
